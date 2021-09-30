@@ -13,7 +13,7 @@ int main()
 //    {
 //    	cout << "Enter a number: ";
 //    	cin >> userNumber;
-//    	if (userNumber > maxVal )
+//    	if (userNumber > maxVal )	// if statement that will update maxvalue when usernumber is greater.
 //    	{
 //    	  maxVal = userNumber;
 //    	}
@@ -22,7 +22,7 @@ int main()
 //    do{
 //    	cout << "Enter a number: ";
 //    	cin >> userNumber;
-//    	 if (userNumber > maxVal )
+//    	 if (userNumber > maxVal ) // if statement that will update maxvalue when usernumber is greater.
 //    	 {
 //    	    maxVal = userNumber;
 //    	 }
@@ -33,7 +33,7 @@ int main()
     for(;userNumber != SENTINEL;cin >> userNumber)
     {
     	cout << "Enter a number: ";
-    	if (userNumber > maxVal )
+    	if (userNumber > maxVal )	// if statement that will update maxvalue when usernumber is greater.
     	{
     	maxVal = userNumber;
     	}
