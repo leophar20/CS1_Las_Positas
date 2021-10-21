@@ -41,32 +41,32 @@ int main(){
 			getline(cin,defaultPizza);
 
 
-			if (defaultPizza == "yes"){
+			if (defaultPizza == "yes"){ // statement if the pizza is cheese up and cut in 8.
 				makePizza(name, toppings);
-			} else if(defaultPizza == "no"){
+			} else if(defaultPizza == "no"){ // statement if not ask if cheese? and if it slice in 8?
 				cout << "Enter 1 if you want cheese, or 0 for no: ";
 				cin >> cheese;
 				cout << "Are you okay with the default 8 slices? ";
 				cin >> defaultSlices;
-				if(defaultSlices == "yes"){
+				if(defaultSlices == "yes"){ // statement if it cuts on 8
 
 					makePizza(name,toppings,cheese);
 
-				}else if(defaultSlices == "no") {
+				}else if(defaultSlices == "no") { // if not asked for number of slices
 					cout << "Enter the number of slices you want: ";
 					cin >> slices;
 					makePizza(name,toppings,cheese,slices);
 
 				}
 
-			getline(cin,wantPizza);
+			getline(cin,wantPizza); // loop for having another pizza.
 			}
 			cout << "\n\nDo you want to order another pizza? "<< endl;
 			getline(cin,wantPizza);
 
 
 	}while(wantPizza != "no");
-	cout << "Good bye! Thanks for playing my Pizza Simulator!" <<endl;
+	cout << "Good bye! Thanks for playing my Pizza Simulator!" <<endl; // bye greetings after saying "no"
 
 	return 0;
 }
@@ -87,12 +87,12 @@ void makePizza(string& name ,string& toppings , int cheese , int slices  ){
 	static int order;
 	cout << "\n\n"<< setfill('*') << setw(40) << '*' << endl;
 	cout << "Making a pizza for " << name <<endl;
-	if(cheese == 0){
+	if(cheese == 0){ //if statement for cheese or no cheese.
 	cout << "Let's see . . . no cheese, got it." << endl;
 	}else {
 	cout << "Let's see . . . adding cheese now! " << endl ;
 	}
-	if(toppings == ""){
+	if(toppings == ""){ // if statement if the user did not put any toppings.
 	cout << "Next, the toppings. Actually, scratch that, no toppings at all? Okay. "<< endl;
 	}else {
 	cout << "Next, the toppings. Adding " << toppings << endl;
@@ -101,7 +101,7 @@ void makePizza(string& name ,string& toppings , int cheese , int slices  ){
 	cout << "Now, slicing this into "<< slices  << endl;
 	cout << "Order up for " << name << endl;
 	cout  << setw(40) << '*' <<endl;
-	order++;
+	order++; // adding one every order
 	cout << "Total order so far: "<< order<<endl;
 	cout << setw(40) << '*'<< endl;
 }
