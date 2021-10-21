@@ -38,24 +38,55 @@ int main(){
 	getline(cin,defaultPizza);
 
 
-	if (defaultPizza == "yes" || "Yes"){
+	if (defaultPizza == "yes"){
 		makePizza(name, toppings);
-	} else if(defaultPizza == "No" || "no"){
+	} else if(defaultPizza == "no"){
 		cout << "Enter 1 if you want cheese, or 0 for no: ";
 		cin >> cheese;
 		cout << "Are you okay with the default 8 slices? ";
 		cin >> defaultSlices;
-		if(defaultSlices == "Yes" || "yes"){
+		if(defaultSlices == "yes"){
 			makePizza(name,toppings,cheese,slices);
-		}else {
+		}else if(defaultSlices == "no") {
 			cout << "Enter the number of slices you want: ";
 			cin >> slices;
+			makePizza(name,toppings,cheese,slices);
 		}
 	}
 	cout << "Do you want to order another pizza? "<< endl;
 	cin.ignore();
 	getline(cin,wantPizza);
 
+	do {
+		cout << "To start, enter your name: " ;
+			getline(cin, name);
+			cout << "Great, what kind of toppings do you want?" << endl;
+			getline(cin, toppings);
+			cout << "Awesome! By default, we add cheese and slice the pizza into 8.\n Are you okay with that?";
+			getline(cin,defaultPizza);
+
+
+			if (defaultPizza == "yes"){
+				makePizza(name, toppings);
+			} else if(defaultPizza == "no"){
+				cout << "Enter 1 if you want cheese, or 0 for no: ";
+				cin >> cheese;
+				cout << "Are you okay with the default 8 slices? ";
+				cin >> defaultSlices;
+				if(defaultSlices == "yes"){
+					makePizza(name,toppings,cheese,slices);
+				}else if(defaultSlices == "no") {
+					cout << "Enter the number of slices you want: ";
+					cin >> slices;
+					makePizza(name,toppings,cheese,slices);
+				}
+			}
+			cout << "Do you want to order another pizza? "<< endl;
+			cin.ignore();
+			getline(cin,wantPizza);
+
+
+	}while(wantPizza == "no");
 
 
 	return 0;
