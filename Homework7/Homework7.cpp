@@ -7,6 +7,16 @@ using namespace std; // @suppress("Symbol is not resolved")
 bool verify(char pwd[], const int SIZE, unsigned& score);
 
 
+/*******************************************************************************
+ *  Description:
+ *      Starting point of the program. Launches a menu-driven program.
+ *
+ *  Input:
+ *      all the variables in order to make a pizza.
+ *
+ *  Output:
+ *      An integer representing the exit value to signal back to the OS
+*******************************************************************************/
 
 
 int main()
@@ -40,6 +50,19 @@ int main()
 	return 0 ;
 }
 
+
+
+
+/*******************************************************************************
+ *  Description:
+ *      Verify if the char array able to met he password requiredment.
+ *
+ *  Input:
+ *     char array ,const int and unsigned score
+ *
+ *  Output:
+ *      true or false
+*******************************************************************************/
 
 
 bool verify(char pwd[], const int SIZE, unsigned& score){
