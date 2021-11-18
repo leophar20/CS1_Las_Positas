@@ -26,7 +26,7 @@ int main() {
 		cout << endl;
 	}
 
-	for ( Item element : items){
+	for ( Item& element : items){
 		cout << "\nName: " << element.name << endl;
 		cout << "Rating: " << element.rating << endl ;
 		cout << "Comment: " << element.comment << endl;
