@@ -9,3 +9,5 @@
 void printInfo( Car& ,int);
 string convert(Car );
 Customer createCustomer(vector<Car>&   , int );
+bool checker (vector<Car>&);
+void printLastInfo (vector<Customer>& theCustomer);
