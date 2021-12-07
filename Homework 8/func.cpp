@@ -38,8 +38,9 @@ string convert(Car theCar)
 Customer createCustomer(vector<Car>& buyer1 , int lot){
  Customer buyer;
 	cout << "What is your name: " << endl;
- getline(cin, buyer.name);
 
+
+	getline(cin, buyer.name);
    buyer.vehicle.color =buyer1.at(lot).color ;
 buyer.vehicle.makeModel = buyer1.at(lot).makeModel ;
    buyer.vehicle.mileage =buyer1.at(lot).mileage;

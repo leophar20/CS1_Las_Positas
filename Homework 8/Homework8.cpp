@@ -43,6 +43,7 @@ int main() {
 	}else if (choice>4 || choice <0){
 		continue;
 	}else{
+	if(buyer.at(choice-1).vehicle.stat == AVAILABLE){
 	 buyer.at(choice-1) = createCustomer(vehicle,choice-1);
 	 cout << "\nThanks for your purchase, I hope you enjoy your car!"<< endl;
 
@@ -53,7 +54,7 @@ int main() {
 		 continue;
 	 }
 	}
-
+	}
 	}while (choice != 0 || choice >4);
 
 
