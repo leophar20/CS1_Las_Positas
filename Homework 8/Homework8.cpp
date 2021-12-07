@@ -35,22 +35,26 @@ int main() {
 		 <<"Or, enter 0 if you wish to leave my dealership. \n"
 		 << "Your Choice: ";
 	cin >> choice;
-	if (choice == 0){
-		cout << "\nOkay, sorry we didn't have a good car for you :("<< endl;
-		break;
-	}else{
+
 	cin.ignore();
+	if (choice == 0){
+	cout << "\nOkay, sorry we didn't have a good car for you :("<< endl;
+	break;
+	}else if (choice>4 || choice <0){
+		continue;
+	}else{
 	 buyer.at(choice-1) = createCustomer(vehicle,choice-1);
 	 cout << "\nThanks for your purchase, I hope you enjoy your car!"<< endl;
-	 if (checker(vehicle) == false){
 
+	 if (checker(vehicle) == true){
+		 printLastInfo( buyer);
 		 break;
 	 }else{
 		 continue;
 	 }
-
 	}
-	}while (choice != 0);
+
+	}while (choice != 0 || choice >4);
 
 
 	return 0;
