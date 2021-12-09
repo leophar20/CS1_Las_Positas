@@ -14,6 +14,16 @@ using namespace std;
 
 
 
+/*******************************************************************************
+ *  Description:
+ *   Print the information of the available vehicle in the parking lot .
+ *
+ *  Input(s):
+ *      N/A
+ *
+ *  Output:
+ *      N/A
+*******************************************************************************/
 
 void printInfo( Car& theCar ,int lot){
 	if (theCar.stat == AVAILABLE){
@@ -24,6 +34,16 @@ void printInfo( Car& theCar ,int lot){
 	cout << setw(8)<<' ' << "Price: $"<< theCar.price << endl;
 	}
 }
+/*******************************************************************************
+ *  Description:
+ *     Convert the enum of the previous car status to string
+ *
+ *  Input(s):
+ *      Car struct
+ *
+ *  Output:
+ *      string of the prev status
+*******************************************************************************/
 
 string convert(Car theCar)
 {
@@ -34,6 +54,16 @@ string convert(Car theCar)
 		default: return "N/A";
 	}
 }
+/*******************************************************************************
+ *  Description:
+ *      Create a customer by asking the input by their name and uptdating the car in the customer struct.
+ *
+ *  Input(s):
+ *      car vector, and int index
+ *
+ *  Output:
+ *      customer
+*******************************************************************************/
 
 Customer createCustomer(vector<Car>& buyer1 , int lot){
  Customer buyer;
@@ -60,6 +90,16 @@ bool checker (vector<Car>& theCar){
 
 
 }
+/*******************************************************************************
+ *  Description:
+ *      Print the last info as the all the car becomes purchased
+ *
+ *  Input(s):
+ *      Customer vector
+ *
+ *  Output:
+ *      N/A
+*******************************************************************************/
 
 void printLastInfo (vector<Customer>& theCustomer){
 

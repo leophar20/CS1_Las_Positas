@@ -24,9 +24,9 @@ int main() {
 	int choice = 0;
 
 
-	do{
+	do{// loop for keep asking for choice until the choice is 0
 	cout << "Welcome to my car dealership! Here is my current inventory:" <<endl;
-	for (int i = 0 ;  index > i ; i ++){
+	for (int i = 0 ;  index > i ; i ++){// loop for printing all the car available in the lot
 
 		printInfo(vehicle.at(i), i+1);
 	}
@@ -37,20 +37,21 @@ int main() {
 	cin >> choice;
 
 	cin.ignore();
-	if (choice == 0){
+
+	if (choice == 0){// break the point if the answer is 0
 	cout << "\nOkay, sorry we didn't have a good car for you :("<< endl;
 	break;
-	}else if (choice>4 || choice <0 ){
+	}else if (choice>4 || choice <0 ){// if the choice is not in range continue the loop
 		continue;
 	}else
 	{
 
-	if(buyer.at(choice-1).vehicle.stat == AVAILABLE){
-	 buyer.at(choice-1) = createCustomer(vehicle,choice-1);
+	if(buyer.at(choice-1).vehicle.stat == AVAILABLE){// statement for making sure the stats of the vehicle is available
+	 buyer.at(choice-1) = createCustomer(vehicle,choice-1);// if it is availale it will create a customer and update the vehicle stat to purchased
 	 cout << "\nThanks for your purchase, I hope you enjoy your car!"<< endl;
 
-	 if (checker(vehicle) == true){
-		 printLastInfo( buyer);
+	 if (checker(vehicle) == true){ // check if all the vehicle is sold.
+		 printLastInfo( buyer);// if all is sold print the last info and summary.
 		 break;
 	 }else{
 		 continue;
